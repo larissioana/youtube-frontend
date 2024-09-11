@@ -1,0 +1,31 @@
+.card-container
+{
+    width: 320px;
+    height: 295px;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+
+    .card-image
+    {
+        object-fit: cover;
+        min-width: 320px;
+        height: 180px;
+        border-radius: 1rem;
+    }
+
+    h2 
+    {
+        font-size: clamp(.9rem, 2vw, 1rem);
+        
+    }
+
+    p 
+    {
+        font-size: .9rem;
+        font-weight: bold;
+    }
+}

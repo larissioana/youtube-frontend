@@ -1,0 +1,51 @@
+.sidebarmenu-container
+{
+    height: 100%;
+    position: fixed;
+    top: 5rem;
+    left: 0rem;
+    width: 10rem;
+    overflow-y: auto ;
+    overflow-x: hidden;
+    z-index: 10;
+    background: var(--bg);
+
+    .col1,
+    .col2,
+    .col3
+    {   display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: .3rem;
+        gap: .8rem;
+        justify-content: flex-start;
+        border-top: 1px solid #817d7d;
+        .sidebarmenu-links 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    .col1 
+    {
+        border-top: 1px solid transparent;
+    }
+
+    .col2,
+    .col3
+    {
+        padding-top: 2rem;
+    }
+
+    .col3 
+    {
+        padding-bottom: 1rem;
+        h3 
+        {
+            font-size: .9rem;
+        }
+    }
+}

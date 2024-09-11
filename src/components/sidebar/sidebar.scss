@@ -1,0 +1,19 @@
+.sidebar-component 
+{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5.3rem;
+    width: 5.5rem;
+    height: 100%;
+    left: 0;
+    background: var(--bg);
+}
+
+@media screen and (max-width: 500px)
+{
+    .sidebar-component
+    {
+        display: none;
+    }
+}

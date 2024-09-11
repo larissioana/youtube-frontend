@@ -1,0 +1,13 @@
+.page-container 
+{
+    margin-top: 6rem;
+    .card-wrapper 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
+}

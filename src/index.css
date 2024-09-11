@@ -1,0 +1,91 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin; 
+  scrollbar-color: var(--bgInput) var(--categories); 
+}
+
+body 
+{
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--color);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.light-theme
+{
+  --bg: rgb(255,255,255);
+  --color: #17181a;
+  --bgInput: #F2F2F2;
+  --categories: #dbd6d6;
+  --links: #497FDB;
+  --searchbar: #F0F0F0;
+}
+
+.dark-theme 
+{
+  --bg: rgb(15,15,15);
+  --color: rgb(233,233,233);
+  --bgInput: rgb(39, 39, 39);
+  --categories: #1b1919;
+  --links: #497FDB;
+  --searchbar: #222222;
+}
+
+.link
+{
+  color: inherit;
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.sidebar-links 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;  
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bgInput); 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--categories); 
+  border-radius: 10px; 
+}
+
+.page-container
+{
+  width: calc(100vw - 9rem);
+  margin-left: 7rem;
+  height: 100%;
+}
+
+button
+{
+  transition: opacity .3s ease;
+  &:hover
+  {
+    opacity: .8;
+  }
+}
+
+@media screen and (max-width: 500px)
+{
+  .page-container
+  {
+    width: 100%;
+    margin-left: 0rem;
+  }
+}

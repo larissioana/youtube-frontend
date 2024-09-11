@@ -1,0 +1,46 @@
+.channel-content
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    img 
+    {
+        object-fit: cover;
+        clip-path: circle();
+    }
+
+    button 
+    {
+        background: var(--color);
+        border: none;
+        padding: .7rem 1rem;
+        border-radius: 2rem;
+        font-size: .9rem;
+        color: var(--bg);
+        font-weight: 600;
+        cursor: pointer;
+        margin-left: 2rem;
+    }
+
+    h4 
+    {
+        font-size: clamp(.9rem, 2vw, 1rem);
+    }
+    p 
+    {
+        font-size: clamp(.8rem, 2vw, .9rem);
+    }
+}
+
+@media screen and (max-width: 443px)
+{
+    .channel-content
+    {
+        button 
+        {
+            margin-left: 0rem;
+        }
+    }
+}
