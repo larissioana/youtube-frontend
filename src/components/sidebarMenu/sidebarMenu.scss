@@ -1,6 +1,6 @@
 .sidebarmenu-container
 {
-    height: 100%;
+    height: 100vh;
     position: fixed;
     top: 5rem;
     left: 0rem;
@@ -19,21 +19,17 @@
         padding: .3rem;
         gap: .8rem;
         justify-content: flex-start;
-        border-top: 1px solid #817d7d;
+        border-bottom: 1px solid #817d7d;
         .sidebarmenu-links 
         {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 1rem;
-            padding-bottom: 1rem;
+            padding-top: 1rem;
         }
     }
-    .col1 
-    {
-        border-top: 1px solid transparent;
-    }
-
+    
     .col2,
     .col3
     {

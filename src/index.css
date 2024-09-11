@@ -20,7 +20,7 @@ body
   --bg: rgb(255,255,255);
   --color: #17181a;
   --bgInput: #F2F2F2;
-  --categories: #dbd6d6;
+  --categories: #E5E5E5;
   --links: #497FDB;
   --searchbar: #F0F0F0;
 }
@@ -30,7 +30,7 @@ body
   --bg: rgb(15,15,15);
   --color: rgb(233,233,233);
   --bgInput: rgb(39, 39, 39);
-  --categories: #1b1919;
+  --categories: #3F3F3F;
   --links: #497FDB;
   --searchbar: #222222;
 }

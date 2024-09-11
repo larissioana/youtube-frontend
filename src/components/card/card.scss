@@ -13,14 +13,14 @@
     {
         object-fit: cover;
         min-width: 320px;
-        height: 180px;
+        max-height: 180px;
         border-radius: 1rem;
     }
 
     h2 
     {
         font-size: clamp(.9rem, 2vw, 1rem);
-        
+        width: 100%;
     }
 
     p 
