@@ -16,7 +16,6 @@ const parseTextWithLinks = (text) => {
 
     return parts.map((part, index) => {
         if (urlPattern.test(part)) {
-            console.log({ part })
             return (
                 <a key={index} href={part} style={{ color: "var(--links)" }} target="_blank" rel="noopener noreferrer" className="blur">
                     {part}
@@ -27,7 +26,6 @@ const parseTextWithLinks = (text) => {
     });
 };
 
-
 const Channel = ({ isMenuOpen }) => {
     const { id } = useParams();
     const { loading, error, channelDetails } = useFetchChannelDetails(id);
@@ -35,6 +33,7 @@ const Channel = ({ isMenuOpen }) => {
     if (loading) return <LoadingBar />
     if (error) return <p classname="error">Error fetching data: {error.message}</p>;
 
+    const imageUrl2 = channelDetails.items[0].snippet.thumbnails.medium.url || channelDetails.items[0].snippet.thumbnails.default.url;
     const imageUrl = channelDetails?.items[0]?.brandingSettings?.image?.bannerExternalUrl;
     const title = channelDetails?.items[0]?.brandingSettings?.channel?.title;
     const description = channelDetails?.items[0]?.brandingSettings?.channel?.description;
@@ -56,7 +55,7 @@ const Channel = ({ isMenuOpen }) => {
                     }
                 </div>
                 <div className="more-details">
-                    <LazyLoadImage effetc="blur" width="88px" height="88px" src={channelDetails.items[0].snippet.thumbnails.default.url} alt={title} />
+                    <LazyLoadImage effect="blur" width="88px" height="88px" src={imageUrl2} alt={title} />
                     <div className="channel-info">
                         <h3>{title}</h3>
                         <div className="channel-flex">

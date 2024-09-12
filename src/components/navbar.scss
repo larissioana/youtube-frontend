@@ -79,9 +79,11 @@
         flex: 1;
         display: flex;
         justify-content: flex-end;
+        width: 100%;
         span 
         {
             cursor: pointer;
+            width: 3rem;
         }
     }
 }

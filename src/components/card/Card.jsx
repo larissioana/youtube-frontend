@@ -1,4 +1,3 @@
-import React from 'react'
 import './card.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -23,9 +22,18 @@ const Card = ({ item }) => {
             {
                 imageUrl &&
                 <>
-                    <Link to={getLinkPath()} aria-label="Navigate to video page">
-                        <LazyLoadImage effect='blur' width="100%" height="100%" loading="lazy" className="card-image" src={imageUrl} alt="youtube thumbnails" />
-                    </Link>
+                    <div className="image">
+                        <Link to={getLinkPath()} aria-label="Navigate to video page">
+                            <LazyLoadImage
+                                effect='blur'
+                                className="card-image"
+                                width="100%" height="100%"
+                                loading="lazy"
+                                src={imageUrl}
+                                alt="youtube thumbnails"
+                            />
+                        </Link>
+                    </div>
                     <h2>{truncateTitle(item.snippet.title, 500)}</h2>
                     {
                         item.snippet.channelTitle &&

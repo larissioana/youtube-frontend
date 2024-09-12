@@ -7,7 +7,7 @@ import Card from '../../card/Card';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const [selectedCategory, setSelectedCategory] = useState("Disturbed");
+    const [selectedCategory, setSelectedCategory] = useState("Me and that man");
     const { data, loading, error } = useFetchHome(selectedCategory);
 
     if (loading) return <LoadingBar />

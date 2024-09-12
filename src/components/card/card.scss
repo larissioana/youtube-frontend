@@ -9,11 +9,20 @@
     align-items: flex-start;
     position: relative;
 
+    .image 
+    {
+        width: 320px;
+        height: 190px;
+        position: relative;
+    }
+
     .card-image
     {
         object-fit: cover;
         min-width: 320px;
-        max-height: 180px;
+        max-height: 190px;
+        position: absolute;
+        inset: 0;
         border-radius: 1rem;
     }
 
