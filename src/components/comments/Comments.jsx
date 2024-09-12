@@ -32,7 +32,7 @@ const Comments = ({ id }) => {
                             videoComments.items.map((item) => {
                                 return <div key={item.id} className="comment" >
 
-                                    <LazyLoadImage effect="blur" width="20px" height="20px" className="comments-img" loading="lazy" src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} />
+                                    <LazyLoadImage effect="blur" width="20px" height="20px" className="comments-img" loading="lazy" src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt={item.snippet.topLevelComment.snippet.authorDisplayName} />
 
                                     <div className="author-details">
                                         <div className="author">
