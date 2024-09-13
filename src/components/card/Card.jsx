@@ -16,7 +16,6 @@ const Card = ({ item }) => {
             return '#';
         }
     };
-
     return (
         <div className="card-container">
             {

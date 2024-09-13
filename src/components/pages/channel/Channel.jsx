@@ -48,12 +48,6 @@ const Channel = ({ isMenuOpen }) => {
                 <title>{title}</title>
             </Helmet>
             <div className="channel-flex-container">
-                <div className="banner">
-                    {
-                        imageUrl &&
-                        <LazyLoadImage effect="blur" src={imageUrl} className="banner-image" alt="banner" width="100%" height="100%" />
-                    }
-                </div>
                 <div className="more-details">
                     <LazyLoadImage effect="blur" width="88px" height="88px" src={imageUrl2} alt={title} />
                     <div className="channel-info">
