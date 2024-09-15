@@ -75,6 +75,7 @@
 {
     .channel-page-container
     {
+
         .banner 
         {
             width: 400px;
@@ -88,5 +89,13 @@
                 height: 100px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 570px)
+{
+    .channel-page-container
+    {
+        margin-top: -2rem;
     }
 }

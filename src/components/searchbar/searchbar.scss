@@ -54,3 +54,14 @@
     }
 }
 }
+
+@media screen and (max-width:500px)
+{
+    .searchbar-container
+    {
+        form 
+        {
+            width: 10rem;
+        }
+    }
+}

@@ -34,7 +34,7 @@ const Channel = ({ isMenuOpen }) => {
     if (error) return <p classname="error">Error fetching data: {error.message}</p>;
 
     const imageUrl2 = channelDetails.items[0].snippet.thumbnails.medium.url || channelDetails.items[0].snippet.thumbnails.default.url;
-    const imageUrl = channelDetails?.items[0]?.brandingSettings?.image?.bannerExternalUrl;
+
     const title = channelDetails?.items[0]?.brandingSettings?.channel?.title;
     const description = channelDetails?.items[0]?.brandingSettings?.channel?.description;
 
@@ -60,7 +60,10 @@ const Channel = ({ isMenuOpen }) => {
                             </ul>
 
                         </div>
-                        <p>{parseTextWithLinks(description)}</p>
+                        {
+                            description &&
+                            <p>{parseTextWithLinks(description)}</p>
+                        }
                     </div>
                 </div>
                 <div className="channel-title">

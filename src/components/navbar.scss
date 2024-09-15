@@ -41,7 +41,7 @@
         .line3 
         {
             width: 1.5rem;
-            height: .15rem;
+            height: .2rem;
             background: var(--color);
         }
     }
@@ -89,6 +89,20 @@
 }
 
 @media screen and (max-width: 768px)
+{
+    .navbar
+    {
+        .nav-left
+        {
+            h1
+            {
+            display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px)
 {
     .navbar
     {

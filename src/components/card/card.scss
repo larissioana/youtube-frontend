@@ -1,7 +1,7 @@
 .card-container
 {
     width: 320px;
-    height: 295px;
+    height: 275px;
     gap: .5rem;
     display: flex;
     flex-direction: column;
@@ -36,5 +36,14 @@
     {
         font-size: .9rem;
         font-weight: bold;
+        display: flex;
+        align-items: baseline;
+        gap: .1rem;
+
+        span 
+        {
+            font-size: .8rem;
+            vertical-align: middle;
+        }
     }
 }

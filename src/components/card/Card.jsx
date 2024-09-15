@@ -30,6 +30,7 @@ const Card = ({ item }) => {
                                 loading="lazy"
                                 src={imageUrl}
                                 alt="youtube thumbnails"
+                                sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
                             />
                         </Link>
                     </div>
@@ -37,7 +38,9 @@ const Card = ({ item }) => {
                     {
                         item.snippet.channelTitle &&
                         <Link to={`/channel/${item.snippet.channelId}`} className="link" >
-                            <p>{item.snippet.channelTitle}</p>
+                            <p>{item.snippet.channelTitle} <span class="material-symbols-outlined">
+                                check_circle
+                            </span></p>
                         </Link>
                     }
                 </>
