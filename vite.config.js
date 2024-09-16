@@ -42,10 +42,9 @@ export default defineConfig({
       deleteOriginFile: false,
     }),
     compression({
-      // Configure Brotli compression
       verbose: true,
       disable: false,
-      threshold: 10240, // Compress files larger than 10kb
+      threshold: 10240,
       algorithm: 'brotliCompress',
       deleteOriginFile: false,
     }),

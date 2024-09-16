@@ -106,11 +106,23 @@
 {
     .navbar
     {
+        gap: 0;
+        justify-content: space-evenly;
+
         .nav-left
         {
-            h1
+            h1, .youtube-logo
             {
             display: none;
+            }
+        }
+
+        .nav-right 
+        {
+            padding-left: 1rem;
+            span 
+            {
+                width: auto;
             }
         }
     }

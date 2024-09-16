@@ -1,6 +1,11 @@
 .sentences-container
 {
     padding-bottom: 0.5rem;
+    p 
+    {
+        font-size: clamp(.9rem, 2vw, 1rem);
+    }
+
     button 
     {
         background: none;

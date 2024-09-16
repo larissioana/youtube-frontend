@@ -8,8 +8,12 @@ const parseSentences = (text) => {
     return parts.map((part, index) => {
         if (part.match(urlPattern)) {
             return (
-                <a key={index} style={{
+                <a key={index} className="link" style={{
                     color: "var(--links)",
+                    fontSize: "clamp(.9rem, 2vw, 1rem)",
+                    display: "inline-block",
+                    maxWidth: "600px",
+                    textOverflow: "ellipsis"
                 }} href={part} target="_blank" rel="noopener noreferrer">
                     {part}
                 </a>

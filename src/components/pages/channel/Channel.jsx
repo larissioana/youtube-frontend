@@ -17,7 +17,7 @@ const parseTextWithLinks = (text) => {
     return parts.map((part, index) => {
         if (urlPattern.test(part)) {
             return (
-                <a key={index} href={part} style={{ color: "var(--links)" }} target="_blank" rel="noopener noreferrer" className="blur">
+                <a key={index} href={part} style={{ color: "var(--links)", display: "inline-block", maxWidth: "400px" }} target="_blank" rel="noopener noreferrer" className="blur">
                     {part}
                 </a>
             );
@@ -49,7 +49,9 @@ const Channel = ({ isMenuOpen }) => {
             </Helmet>
             <div className="channel-flex-container">
                 <div className="more-details">
-                    <LazyLoadImage effect="blur" width="88px" height="88px" src={imageUrl2} alt={title} />
+                    {imageUrl2 &&
+                        <LazyLoadImage effect="blur" width="88px" height="88px" src={imageUrl2} alt={title} />
+                    }
                     <div className="channel-info">
                         <h3>{title}</h3>
                         <div className="channel-flex">
@@ -62,7 +64,7 @@ const Channel = ({ isMenuOpen }) => {
                         </div>
                         {
                             description &&
-                            <p>{parseTextWithLinks(description)}</p>
+                            <p className="description">{parseTextWithLinks(description)}</p>
                         }
                     </div>
                 </div>

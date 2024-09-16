@@ -34,7 +34,7 @@ const Card = ({ item }) => {
                             />
                         </Link>
                     </div>
-                    <h2>{truncateTitle(item.snippet.title, 500)}</h2>
+                    <h2>{truncateTitle(item.snippet.title, 70)}</h2>
                     {
                         item.snippet.channelTitle &&
                         <Link to={`/channel/${item.snippet.channelId}`} className="link" >

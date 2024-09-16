@@ -18,13 +18,12 @@ const SuggestedVideos = ({ id }) => {
             {
                 suggestedVideos?.items.map((item, index) => {
                     const thumbnailUrl = item.snippet.thumbnails?.medium?.url || item.snippet.thumbnails?.default?.url;
-
                     return <Link to={`/video/${item.id.videoId}`} aria-label="Navigate to video page" className="link" key={index}>
                         <div className="suggested-videos">
                             <LazyLoadImage effect="blur" src={thumbnailUrl} alt={item.snippet.channelTitle} />
                             <div className="suggested-videos-details-wrapper">
                                 <h3>{truncateTitle(item.snippet.title, 78)}</h3>
-                                <h4>{item.snippet.channelTitle}</h4>
+                                <h4>{item.snippet.channelTitle.slice(0, 30) + "..."}</h4>
                                 <p>{timeAgo(item.snippet.publishedAt)}</p>
                             </div>
                         </div>

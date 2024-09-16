@@ -4,7 +4,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Searchbar from './searchbar/Searchbar';
 import Sidebar from './sidebar/Sidebar';
-import { useState } from 'react';
 import SidebarMenu from './sidebarMenu/SidebarMenu';
 import { useLocation, Link } from 'react-router-dom';
 
@@ -32,7 +31,7 @@ const Navbar = ({ toggleTheme, isDarkMode, isMenuOpen, setIsMenuOpen }) => {
                 )
             }
             <div className="nav-left">
-                <LazyLoadImage effect="blur" src={logo} alt="youtube logo" width="30px" height="30px" />
+                <LazyLoadImage effect="blur" src={logo} alt="youtube logo" className="youtube-logo" width="30px" height="30px" />
                 <Link className="link" to="/" aria-label="Navigate to home page">
                     <h1>Youtube</h1>
                 </Link>

@@ -1,24 +1,27 @@
 .channel-page-container
 {
-    padding: 1rem;
     margin-top: 5rem;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .channel-flex-container 
     {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
    
     .more-details
     {
         display: flex;
-        gap: 2rem;
         padding: 1rem;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        padding-top: 1rem;
+        gap: 1rem;
 
         img 
         {
@@ -33,13 +36,20 @@
         flex-direction: column;
         gap: .3rem;
 
+        .description 
+        {
+            display: inline-block;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
         p 
         {
             max-width: 700px;
         }
         h3 
         {
-            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-size: clamp(1.3rem, 3vw, 2.6rem);
         }
         .channel-flex 
         {
@@ -71,31 +81,28 @@
 }
 }
 
-@media screen and (max-width: 805px)
-{
-    .channel-page-container
-    {
-
-        .banner 
-        {
-            width: 400px;
-        }
-
-        .more-details
-        {
-            img 
-            {
-                width: 100px;
-                height: 100px;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 570px)
 {
     .channel-page-container
     {
-        margin-top: -2rem;
+       
+        .channel-flex-container 
+        {
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+
+            .more-details
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .description 
+                {
+                    max-width: 400px;
+                }
+            }
+        }
     }
 }
