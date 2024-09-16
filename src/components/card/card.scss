@@ -1,8 +1,8 @@
 .card-container
 {
     width: 320px;
-    height: 275px;
-    gap: .5rem;
+    height: 255px;
+    gap: .3rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,16 +34,7 @@
 
     p 
     {
-        font-size: .9rem;
-        font-weight: bold;
-        display: flex;
-        align-items: baseline;
-        gap: .1rem;
-
-        span 
-        {
-            font-size: .8rem;
-            vertical-align: middle;
-        }
+        font-size: 1rem;
+        font-weight: lighter
     }
 }

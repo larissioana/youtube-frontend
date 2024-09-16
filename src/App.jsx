@@ -32,7 +32,7 @@ function App() {
         <ScrollToTop />
         <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isMenuOpen={isMenuOpen} />} />
           <Route path="/video/:id" element={<VideoDetails isMenuOpen={isMenuOpen} />} />
           <Route path="/channel/:id" element={<Channel isMenuOpen={isMenuOpen} />} />
           <Route path="/search" element={<SearchedResultsPage isMenuOpen={isMenuOpen} />} />

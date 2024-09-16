@@ -34,13 +34,11 @@ const Card = ({ item }) => {
                             />
                         </Link>
                     </div>
-                    <h2>{truncateTitle(item.snippet.title, 70)}</h2>
+                    <h2>{truncateTitle(item.snippet.title, 67)}</h2>
                     {
                         item.snippet.channelTitle &&
                         <Link to={`/channel/${item.snippet.channelId}`} className="link" >
-                            <p>{item.snippet.channelTitle} <span class="material-symbols-outlined">
-                                check_circle
-                            </span></p>
+                            <p>{item.snippet.channelTitle}</p>
                         </Link>
                     }
                 </>

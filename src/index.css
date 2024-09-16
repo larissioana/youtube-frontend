@@ -65,12 +65,7 @@ body
   border-radius: 10px; 
 }
 
-.page-container
-{
-  width: calc(100vw - 9rem);
-  margin-left: 7rem;
-  height: 100%;
-}
+
 
 button
 {
@@ -86,6 +81,6 @@ button
   .page-container
   {
     width: 100%;
-    margin-left: 0rem;
+    margin-left: 0rem!important;
   }
 }

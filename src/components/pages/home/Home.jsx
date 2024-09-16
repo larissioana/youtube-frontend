@@ -4,9 +4,8 @@ import Categories from '../../categories/Categories';
 import useFetchHome from '../../../useHooks/useFetchHome';
 import LoadingBar from '../../loadingBar/LoadingBar';
 import Card from '../../card/Card';
-import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home = ({ isMenuOpen }) => {
     const [selectedCategory, setSelectedCategory] = useState("Me and that man");
     const { data, loading, error } = useFetchHome(selectedCategory);
 
@@ -14,7 +13,10 @@ const Home = () => {
     if (error) return <p classname="error">Error fetching data: {error.message}</p>;
 
     return (
-        <div className="page-container">
+        <div className="page-container" style={{
+            marginLeft: isMenuOpen ? "8rem" : "6rem",
+            transition: "margin .3s ease-in"
+        }}>
             <Categories setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory} />
             <div className="card-wrapper">
                 {
