@@ -69,7 +69,7 @@ const Channel = ({ isMenuOpen }) => {
                     </div>
                 </div>
                 <div className="channel-title">
-                    <h2>Related Videos</h2>
+                    <h2>Videos</h2>
                 </div>
                 <ChannelVideos id={id} />
             </div>
